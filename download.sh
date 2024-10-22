@@ -33,12 +33,23 @@ elif [ $FILE = 'pretrained-celeba-256x256' ]; then
 
 elif [ $FILE = 'rafd' ]; then
     # FER images and attribute labels
-    URL=https://www.dropbox.com/scl/fi/qgaqe398yg87p1v5w69va/RaFD.zip?rlkey=gt3b8ezm0fsf72s9ck2iqgipw&st=2g6jjkrd&dl=1
-    ZIP_FILE=./data/RaFD.zip
+    #URL=https://www.dropbox.com/scl/fi/qgaqe398yg87p1v5w69va/RaFD.zip?rlkey=gt3b8ezm0fsf72s9ck2iqgipw&st=2g6jjkrd&dl=1
+    #ZIP_FILE=./data/RaFD.zip
+    #mkdir -p ./data/
+    #wget -N $URL -O $ZIP_FILE
+    #unzip $ZIP_FILE -d ./data/
+    #rm $ZIP_FILE
+    # Create the data directory if it doesn't exist
     mkdir -p ./data/
-    wget -N $URL -O $ZIP_FILE
-    unzip $ZIP_FILE -d ./data/
-    rm $ZIP_FILE
+    
+    # Directly use the URL to download the ZIP file
+    wget -N "https://www.dropbox.com/scl/fi/qgaqe398yg87p1v5w69va/RaFD.zip?rlkey=gt3b8ezm0fsf72s9ck2iqgipw&st=2g6jjkrd&dl=1" -O "./data/RaFD.zip"
+    
+    # Unzip the downloaded file into the data directory
+    unzip "./data/RaFD.zip" -d ./data/
+    
+    # Remove the ZIP file after unzipping
+    rm "./data/RaFD.zip"
 
 
 else
