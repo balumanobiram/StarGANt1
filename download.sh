@@ -31,10 +31,10 @@ elif [ $FILE == 'pretrained-celeba-256x256' ]; then
     unzip $ZIP_FILE -d ./stargan_celeba_256/models/
     rm $ZIP_FILE
 
-elif [$FILE == 'fer2013']; then
+elif [$FILE == 'rafd']; then
     # FER images and attribute labels
-    URL=https://www.dropbox.com/scl/fi/a78b4vrfnlcbvjhzxihca/data.rar?rlkey=xm8337g4igpk6v5hk2hyiuoiy&st=nfpz6jo8&dl=0
-    ZIP_FILE=./data/fer2013.zip
+    URL=https://www.dropbox.com/scl/fi/4s6fqs6i16sbol08a12sp/RaFD.rar?rlkey=cwatogn6di77iqoi0ng5dia89&st=nnc4z2rk&dl=0
+    ZIP_FILE=./data/rafd.zip
     mkdir -p ./data/
     wget -N $URL -O $ZIP_FILE
     unzip $ZIP_FILE -d ./data/
