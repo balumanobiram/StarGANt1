@@ -33,7 +33,7 @@ elif [ $FILE = 'pretrained-celeba-256x256' ]; then
 
 elif [ $FILE = 'rafd' ]; then
     # FER images and attribute labels
-    URL=https://www.dropbox.com/scl/fi/4s6fqs6i16sbol08a12sp/RaFD.rar?rlkey=cwatogn6di77iqoi0ng5dia89&st=nnc4z2rk&dl=0
+    URL=https://www.dropbox.com/scl/fi/qgaqe398yg87p1v5w69va/RaFD.zip?rlkey=gt3b8ezm0fsf72s9ck2iqgipw&st=2g6jjkrd&dl=0
     ZIP_FILE=./data/RaFD.zip
     mkdir -p ./data/
     wget -N $URL -O $ZIP_FILE
