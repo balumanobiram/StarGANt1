@@ -1,6 +1,6 @@
 FILE=$1
 
-if [ $FILE == "celeba" ]; then
+if [ $FILE = "celeba" ]; then
 
     # CelebA images and attribute labels
     URL=https://www.dropbox.com/s/d1kjpkqklf0uw77/celeba.zip?dl=0
@@ -11,7 +11,7 @@ if [ $FILE == "celeba" ]; then
     rm $ZIP_FILE
 
 
-elif [ $FILE == 'pretrained-celeba-128x128' ]; then
+elif [ $FILE = 'pretrained-celeba-128x128' ]; then
 
     # StarGAN trained on CelebA (Black_Hair, Blond_Hair, Brown_Hair, Male, Young), 128x128 resolution
     URL=https://www.dropbox.com/s/7e966qq0nlxwte4/celeba-128x128-5attrs.zip?dl=0
@@ -21,7 +21,7 @@ elif [ $FILE == 'pretrained-celeba-128x128' ]; then
     unzip $ZIP_FILE -d ./stargan_celeba_128/models/
     rm $ZIP_FILE
 
-elif [ $FILE == 'pretrained-celeba-256x256' ]; then
+elif [ $FILE = 'pretrained-celeba-256x256' ]; then
 
     # StarGAN trained on CelebA (Black_Hair, Blond_Hair, Brown_Hair, Male, Young), 256x256 resolution
     URL=https://www.dropbox.com/s/zdq6roqf63m0v5f/celeba-256x256-5attrs.zip?dl=0
@@ -31,7 +31,7 @@ elif [ $FILE == 'pretrained-celeba-256x256' ]; then
     unzip $ZIP_FILE -d ./stargan_celeba_256/models/
     rm $ZIP_FILE
 
-elif [ $FILE == 'rafd' ]; then
+elif [ $FILE = 'rafd' ]; then
     # FER images and attribute labels
     URL=https://www.dropbox.com/scl/fi/4s6fqs6i16sbol08a12sp/RaFD.rar?rlkey=cwatogn6di77iqoi0ng5dia89&st=nnc4z2rk&dl=0
     ZIP_FILE=./data/rafd.zip
